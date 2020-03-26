@@ -22,5 +22,12 @@ Git push origin <branch (master, Hayden, yours)>
 
 Whenever you log on:
 -	Always make sure you are using your branch and everything up to date by pulling from your branch or master
-Git pull origin <branch wanted>
+Git pull origin <branch wanted> 
 
+Security Login Command needed before pushing or pulling:
+ git config --global user.email 
+ git config --global user.name 
+
+Again: make sure  you always push before closing to your branch CHECKOUT TO YOUR BRANCH and pull when starting a new
+
+To remove the last commit from git, you can simply run git reset --hard HEAD^ If you are removing multiple commits from the top, you can run git reset --hard HEAD~2 to remove the last two commits. You can increase the number to remove even more commits.
