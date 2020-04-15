@@ -1,5 +1,5 @@
 /*
- * p3_3.c: Initialize and display "hello" on the LCD using 4-bit data mode.
+ * Initialize and display "hello world" and "Assignment 3" on the LCD using 4-bit data mode.
  * Data and control pins share Port 4.
  */
 
@@ -13,9 +13,9 @@ int main(void) {
 
     for(;;)
     {
-        LCD_command(0x01);     //* clear display
+        LCD_command(0x01);                  //* clear display
         
-        Write_char_LCD('H');      //* write the word "Hello"
+        Write_char_LCD('H');                //* write the word "Hello"
         Write_char_LCD('E');
         Write_char_LCD('L');
         Write_char_LCD('L');
@@ -25,14 +25,14 @@ int main(void) {
         Write_char_LCD('W');
         Write_char_LCD('O');
         Write_char_LCD('R');
-        Write_char_LCD('L');      //* write the word "World"
+        Write_char_LCD('L');                //* write the word "World"
         Write_char_LCD('D');
 
-        delay_us(1000000);      //1 second viewing time to see the word displayed
-        //LCD_command(0x01);    //testing that the clear command has long enough delay
+        delay_us(1000000);                  //1 second viewing time to see the word displayed
+        //LCD_command(0x01);                testing that the clear command has long enough delay
         LCD_Line2();
-        //Home_LCD();           //Using triple commands to test delay and accuracy of the words printed in lcd
-        Write_string_LCD("Assignment 3");//write string to lcd
+        //Home_LCD();                       Using triple commands to test delay and accuracy of the words printed in lcd
+        Write_string_LCD("Assignment 3");   //write string to lcd
         delay_us(1261000);
    }
 }
