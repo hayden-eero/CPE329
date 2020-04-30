@@ -16,15 +16,12 @@ void main(void)
 {
     WDT_A->CTL = WDT_A_CTL_PW | WDT_A_CTL_HOLD;     // stop watchdog timer
 
-    set_DCO(FREQ_24_Mhz);
-     //GPIO
+    set_DCO(FREQ_24_Mhz);   // setting frequency of the clk
+    
+    //GPIO
     P4->SEL1&= ~BIT0;
     P4->SEL0 &= ~BIT0;
-
-       // setup LEDs
     P4->DIR |= BIT0;
-
-
     P4->OUT |= BIT0;
 
     // setup TIMER_A0
