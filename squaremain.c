@@ -66,7 +66,7 @@ int main(void){
         }
         
         //For Triangle Wave Part B
-        /*
+        
         if (time==1)   // rising
         {
             if (data < 2482)    // 2V max
@@ -83,7 +83,7 @@ int main(void){
                 dataDAC(data);
             }
         }
-        */
+        
     }
 }
 
