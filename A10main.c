@@ -49,6 +49,10 @@ int main(void) {
     InitEEPROM(EEPROM_ADDRESS);                     //Initialize I2C mode
 
     WriteEEPROM(0x1122, 0x21);                      //Writing to I2C
+    
+    // for (i = 4000; i > 0; i--);
+    // Delay for EEPROM write cycle (5 ms)   uncomment to do both at the same time
+    //value = ReadEEPROM(0x1122);         // Read value from EEPROM
 
     P2->OUT |= (value & (BIT2 | BIT1 | BIT0));      // Set LED2 with 3 LSB of value
 
